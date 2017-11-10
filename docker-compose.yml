@@ -1,0 +1,42 @@
+version: '2'
+services:
+  zookeeper:
+    image: zookeeper
+    ports:
+      - 2181:2181
+  ch1:
+    build:
+      context: .
+      dockerfile: Dockerfile.ch1
+    ports:
+      - 8811:8123
+      - 9011:9000
+    volumes:
+      - "/home/nsonich/clh_cluster/ch1_volume:/var/lib/clickhouse"
+  ch2:
+    build:
+      context: .
+      dockerfile: Dockerfile.ch2
+    ports:
+      - 8812:8123
+      - 9012:9000
+    volumes:
+      - "/home/nsonich/clh_cluster/ch2_volume:/var/lib/clickhouse"
+  ch3:
+    build:
+      context: .
+      dockerfile: Dockerfile.ch3
+    ports:
+      - 8813:8123
+      - 9013:9000
+    volumes:
+      - "/home/nsonich/clh_cluster/ch3_volume:/var/lib/clickhouse"
+  ch4:
+    build:
+      context: .
+      dockerfile: Dockerfile.ch4
+    ports:
+      - 8814:8123
+      - 9014:9000
+    volumes:
+      - "/home/nsonich/clh_cluster/ch4_volume:/var/lib/clickhouse"
