@@ -1,17 +1,15 @@
 <yandex>
     <clickhouse_remote_servers>
-        <cluster_ua_stats>
+        <test_cluster>
             <!-- shard 01 -->
             <shard>
                 <replica>
                     <host>ch1</host>
                     <port>9000</port>
-                    <default_database>adv_stats</default_database>
                 </replica>
                 <replica>
                     <host>ch2</host>
                     <port>9000</port>
-                    <default_database>adv_stats</default_database>
                 </replica>
             </shard>
 
@@ -20,105 +18,13 @@
                 <replica>
                     <host>ch3</host>
                     <port>9000</port>
-                    <default_database>adv_stats</default_database>
                 </replica>
                 <replica>
                     <host>ch4</host>
                     <port>9000</port>
-                    <default_database>adv_stats</default_database>
                 </replica>
             </shard>
-        </cluster_ua_stats>
-
-        <cluster_ru_stats>
-            <!-- shard 01 -->
-            <shard>
-                <replica>
-                    <host>ch1</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch2</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-
-            <!-- shard 02 -->
-            <shard>
-                <replica>
-                    <host>ch3</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch4</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-        </cluster_ru_stats>
-
-        <cluster_by_stats>
-            <!-- shard 01 -->
-            <shard>
-                <replica>
-                    <host>ch1</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch2</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-
-            <!-- shard 02 -->
-            <shard>
-                <replica>
-                    <host>ch3</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch4</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-        </cluster_by_stats>
-
-        <cluster_kz_stats>
-            <!-- shard 01 -->
-            <shard>
-                <replica>
-                    <host>ch1</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch2</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-
-            <!-- shard 02 -->
-            <shard>
-                <replica>
-                    <host>ch3</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-                <replica>
-                    <host>ch4</host>
-                    <port>9000</port>
-                    <default_database>adv_stats</default_database>
-                </replica>
-            </shard>
-        </cluster_kz_stats>
+        </test_cluster>
     </clickhouse_remote_servers>
 
     <zookeeper-servers>
