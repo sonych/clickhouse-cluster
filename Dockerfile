@@ -6,7 +6,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E0C56BD4
 RUN echo "deb http://repo.yandex.ru/clickhouse/deb/stable/ main/" | tee /etc/apt/sources.list.d/clickhouse.list
 RUN apt-get update
 
-RUN apt-get install -y --allow-unauthenticated \
+RUN apt-get install -y \
     clickhouse-server \
     clickhouse-client
 
