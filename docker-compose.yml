@@ -5,38 +5,34 @@ services:
     ports:
       - 2181:2181
   ch1:
-    build:
-      context: .
-      dockerfile: Dockerfile.ch1
+    build: .
     ports:
       - 8811:8123
       - 9011:9000
     volumes:
-      - "/home/nsonich/clh_cluster/ch1_volume:/var/lib/clickhouse"
+      - ./ch1_volume:/var/lib/clickhouse
+    command: ["clickhouse-server", "--config-file=/etc/clickhouse-server/ch1_config.xml"]
   ch2:
-    build:
-      context: .
-      dockerfile: Dockerfile.ch2
+    build: .
     ports:
       - 8812:8123
       - 9012:9000
     volumes:
-      - "/home/nsonich/clh_cluster/ch2_volume:/var/lib/clickhouse"
+      - ./ch2_volume:/var/lib/clickhouse
+    command: ["clickhouse-server", "--config-file=/etc/clickhouse-server/ch2_config.xml"]
   ch3:
-    build:
-      context: .
-      dockerfile: Dockerfile.ch3
+    build: .
     ports:
       - 8813:8123
       - 9013:9000
     volumes:
-      - "/home/nsonich/clh_cluster/ch3_volume:/var/lib/clickhouse"
+      - ./ch3_volume:/var/lib/clickhouse
+    command: ["clickhouse-server", "--config-file=/etc/clickhouse-server/ch3_config.xml"]    
   ch4:
-    build:
-      context: .
-      dockerfile: Dockerfile.ch4
+    build: .
     ports:
       - 8814:8123
       - 9014:9000
     volumes:
-      - "/home/nsonich/clh_cluster/ch4_volume:/var/lib/clickhouse"
+      - ./ch4_volume:/var/lib/clickhouse
+    command: ["clickhouse-server", "--config-file=/etc/clickhouse-server/ch4_config.xml"]
