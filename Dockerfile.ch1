@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-ARG repository="deb http://repo.yandex.ru/clickhouse/deb/stable/ main/"
+ARG repository="deb http://repo.yandex.ru/clickhouse/deb/lts/ main/"
 ARG version=19.14.10.16
 ARG gosu_ver=1.10
 
@@ -37,7 +37,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN mkdir /docker-entrypoint-initdb.d
 
-COPY ["./ch1_config.xml", "/etc/clickhouse-server/config.xml"]
+#COPY ["./ch1_config.xml", "/etc/clickhouse-server/config.xml"]
 COPY ["./include_from.xml", "/etc/clickhouse-server/include_from.xml"]
 COPY ["./users.xml", "/etc/clickhouse-server/users.xml"]
 COPY ["./dictionary.xml", "/etc/clickhouse-server/dictionary.xml"]
