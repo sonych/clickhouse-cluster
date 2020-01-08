@@ -1,0 +1,38 @@
+<yandex>
+    <comment>Some comments</comment>
+
+    <dictionary>
+        <name>adv_source</name>
+
+        <source>
+            <http>
+                <url>http://ch-dictionary.prd.evo/dict.csv</url>
+                <format>CSV</format>
+            </http>
+        </source>
+
+        <layout>
+            <complex_key_hashed />
+        </layout>
+
+        <structure>
+            <key>
+                <attribute>
+                    <name>adv_source</name>
+                    <type>String</type>
+                </attribute>
+            </key>
+            <attribute>
+                <name>analytic_source</name>
+                <type>String</type>
+                <null_value>nan</null_value>
+            </attribute>
+        </structure>
+
+        <lifetime>
+            <!-- update dict around every 12 hours -->
+            <min>43000</min> 
+            <max>43400</max> 
+        </lifetime>
+    </dictionary>
+</yandex>

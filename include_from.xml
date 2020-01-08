@@ -1,6 +1,6 @@
 <yandex>
     <clickhouse_remote_servers>
-        <test_cluster>
+        <ua_cluster>
             <!-- shard 01 -->
             <shard>
                 <replica>
@@ -24,7 +24,7 @@
                     <port>9000</port>
                 </replica>
             </shard>
-        </test_cluster>
+        </ua_cluster>
     </clickhouse_remote_servers>
 
     <zookeeper-servers>
