@@ -7,44 +7,50 @@ services:
   ch1:
     build:
       context: .
-      dockerfile: Dockerfile.ch1
+      dockerfile: Dockerfile.ch
     depends_on:
       - zookeeper
     ports:
       - 8811:8123
       - 9011:9000
     volumes:
-      - "/Users/sonych/dev/own/clickhouse-cluster-data/volume1:/var/lib/clickhouse"
+      - ./ch1_volume:/var/lib/clickhouse
   ch2:
     build:
       context: .
-      dockerfile: Dockerfile.ch2
+      dockerfile: Dockerfile.ch
+      args:
+        SHARD: 2
     depends_on:
       - zookeeper
     ports:
       - 8812:8123
       - 9012:9000
     volumes:
-      - "/Users/sonych/dev/own/clickhouse-cluster-data/volume2:/var/lib/clickhouse"
+      - "./ch2_volume:/var/lib/clickhouse"
   ch3:
     build:
       context: .
-      dockerfile: Dockerfile.ch3
+      dockerfile: Dockerfile.ch
+      args:
+        SHARD: 3
     depends_on:
       - zookeeper
     ports:
       - 8813:8123
       - 9013:9000
     volumes:
-      - "/Users/sonych/dev/own/clickhouse-cluster-data/volume3:/var/lib/clickhouse"
+      - "./ch3_volume:/var/lib/clickhouse"
   ch4:
     build:
       context: .
-      dockerfile: Dockerfile.ch4
+      dockerfile: Dockerfile.ch
+      args:
+        SHARD: 4
     depends_on:
       - zookeeper
     ports:
       - 8814:8123
       - 9014:9000
     volumes:
-      - "/Users/sonych/dev/own/clickhouse-cluster-data/volume4:/var/lib/clickhouse"
+      - "./ch4_volume:/var/lib/clickhouse"
