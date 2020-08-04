@@ -127,8 +127,7 @@
       -->
     <include_from>/etc/clickhouse-server/include_from.xml</include_from>
     <remote_servers incl="clickhouse_remote_servers" />
-
-    <!-- If element has 'incl' attribute, then for it's value will be used corresponding substitution from another file.
+        <!-- If element has 'incl' attribute, then for it's value will be used corresponding substitution from another file.
          By default, path to file with substitutions is /etc/metrika.xml. It could be changed in config in 'include_from' element.
          Values for substitutions are specified in /yandex/name_of_substitution elements in that file.
       -->
@@ -139,7 +138,7 @@
          See https://clickhouse.yandex/reference_en.html#Data%20replication
       -->
     <zookeeper incl="zookeeper-servers" optional="true" />
-    <!-- Substitutions for parameters of replicated tables.
+        <!-- Substitutions for parameters of replicated tables.
           Optional. If you don't use replicated tables, you could omit that.
 
          See https://clickhouse.yandex/reference_en.html#Creating%20replicated%20tables
